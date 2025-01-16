@@ -3,3 +3,112 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+#book-table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-line {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-line:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    width: 40%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 90%;
+    height: auto;
+    max-height: 100%;
+    border-radius: 8px;
+}
+
+.details {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.detail-row {
+    font-size: 1rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail-row strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Styles spécifiques pour les badges */
+.badge {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Couleurs pour les niveaux de difficulté */
+.badge.facile {
+    background-color: #28a745; /* Vert */
+}
+
+.badge.moyenne {
+    background-color: #fd7e14; /* Orange */
+}
+
+.badge.difficile {
+    background-color: #dc3545; /* Rouge */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .book-line {
+        flex-direction: column;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .details {
+        width: 100%;
+    }
+}
